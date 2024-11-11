@@ -1,0 +1,545 @@
+/* 全局样式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    background-image: url('https://imgapi.cn/api.php?zd=zsy&fl=fengjing&gs=images');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Header 样式 */
+header h1 {
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+header h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #84fab0, #8fd3f4);
+    border-radius: 2px;
+}
+
+/* H2 样式 */
+h2 {
+    color: #1e88e5;
+    text-align: center;
+    margin: 30px 0 20px;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #1e88e5, #00acc1);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* H3 样式 */
+h3 {
+    color: #00897b;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    font-weight: 600;
+    border-bottom: 2px solid #00897b;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+h3::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #ff5722;
+}
+
+/* Statistics 和 时间样式 */
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.tracking {
+    margin-bottom: 10px;
+}
+
+.stars {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.stars a img {
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+
+.stars a img:hover {
+    transform: scale(1.1);
+}
+
+/* 时间显示 */
+.time-container {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    color: #4a4a4a;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.time-container .fas {
+    margin-right: 10px;
+    color: #ff4500;
+}
+
+#current-date {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+#current-time {
+    white-space: pre;
+}
+
+/* 主体内容样式 */
+main {
+    margin-bottom: 30px;
+}
+
+.search-section {
+    margin-bottom: 30px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#search-input {
+    padding: 10px 15px;
+    font-size: 1em;
+    border: 2px solid #8fd3f4;
+    border-radius: 4px;
+    flex: 1;
+    max-width: 500px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 122, 255, 0.1);
+}
+
+#search-input:focus {
+    border-color: #84fab0;
+    outline: none;
+    box-shadow: 0 0 20px rgba(132, 250, 176, 0.3);
+}
+
+#search-button {
+    padding: 10px;
+    background: linear-gradient(45deg, #84fab0, #8fd3f4);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#search-button:hover {
+    background: linear-gradient(45deg, #8fd3f4, #84fab0);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+#search-button svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+/* 方法样式 */
+.methods {
+    margin-bottom: 30px;
+}
+
+.method {
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.method:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+pre {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 15px 20px 20px 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+pre::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 12px;
+    height: 12px;
+    background: #ff5f56;
+    border-radius: 50%;
+    box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+}
+
+code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.9em;
+    display: inline-block;
+    transform: translateY(10px);
+}
+
+.copy-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: #007aff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s, background-color 0.3s, transform 0.3s;
+    font-size: 0.8em;
+}
+
+.copy-button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+pre:hover .copy-button {
+    opacity: 1;
+}
+
+/* Footer 样式 */
+footer {
+    margin-top: 30px;
+    padding: 30px 0;
+    background: linear-gradient(120deg, #eff5f1a8 0%, #d5e1e7 100%);
+    border-radius: 0 0 15px 15px;
+    color: #4a4a4a;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #4a4a4a;
+}
+
+.footer-section a {
+    color: #4a4a4a;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #aa9300;
+    text-decoration: underline;
+}
+
+.footer-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-icons a {
+    color: #4a4a4a;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: #aa9300;
+}
+
+/* 针对Cloudflare信息的样式 */
+#cf {
+    text-align: center;
+    color: #f55252;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    word-wrap: break-word;
+    font-size: 1em;
+    line-height: 1.4;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cf-line {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.cf-item {
+    padding: 5px;
+    background: rgba(231, 237, 233, 0.8);
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .cf-line {
+        flex-direction: column;
+    }
+}
+
+/* 针对LA-DATA-WIDGET-container的样式 */
+#LA-DATA-WIDGET-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式设置 */
+@media (min-width: 1201px) {
+    .container {
+        padding: 60px 40px;
+    }
+
+    #search-input {
+        max-width: 500px;
+    }
+
+    .copy-button {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .container {
+        padding: 50px 30px;
+        margin: 20px;
+    }
+
+    #search-input {
+        max-width: 400px;
+    }
+
+    .method h3 {
+        font-size: 1.3em;
+    }
+
+    .stars a img {
+        height: 23px;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 30px 15px;
+        margin: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .search-section h2,
+    .methods h2 {
+        font-size: 1.6em;
+    }
+
+    .method h3 {
+        font-size: 1.2em;
+    }
+
+    #search-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .stars {
+        gap: 10px;
+    }
+
+    .stars a img {
+        height: 20px;
+    }
+
+    .time-container {
+        flex-direction: column;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    #current-date {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-section {
+        width: 100%;
+    }
+
+    .footer-content span {
+        width: 100%;
+    }
+
+    .copy-button {
+        font-size: 0.75em;
+        padding: 4px 8px;
+    }
+}
+
+@media print {
+    body {
+        background: none;
+        padding: 20px;
+    }
+
+    .container {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .copy-button {
+        display: none;
+    }
+
+    pre::before {
+        display: none;
+    }
+}
