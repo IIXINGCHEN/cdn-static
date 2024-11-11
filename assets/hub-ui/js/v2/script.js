@@ -140,9 +140,9 @@ function parseTraceData(data) {
 function createSwalContent() {
     const wrapper = document.createElement('div');
     wrapper.innerHTML = `
-        由于 Cloudflare Worker 每日请求数量限制，本网站已经限制了部分站点请求（不包括真实 IP，也不支持 docker 容器的真实 IP）。
-        对于此类请求，HTTP 状态码将返回 403，部分用户访问网站返回 403 仅作为正常业务状态。<br><br>
-        具体监控方式：Uptime Kuma`;
+        由于 Cloudflare Worker 每日请求次数有限，目前本网站已经屏蔽部分监控本站请求（不会拉黑 IP，也不影响 docker 镜像的拉取）。
+        对于此类请求，HTTP 状态码将返回 403，部分监控工具检测到网站返回 403 可视为网站处于正常运营状态。<br><br>
+        已屏蔽监控工具：Uptime Kuma`;
     return wrapper;
 }
 
