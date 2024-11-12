@@ -230,7 +230,7 @@ pre:hover .copy-button {
 
 .cf-item {
     margin-top: 2px;
-    margin-right: 15px;
+    margin-right: 5px;
 }
 
 .cf-item:not(:last-child)::after {
