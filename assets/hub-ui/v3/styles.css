@@ -1,0 +1,270 @@
+/* 全局样式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    background-image: url('https://imgapi.cn/api.php?zd=zsy&fl=fengjing&gs=images');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 容器样式 */
+.container {
+    max-width: 850px;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease;
+    box-sizing: border-box;
+    /* 确保padding不会影响宽度 */
+}
+
+/* 标题样式 */
+h1,
+h2,
+h3 {
+    color: #007aff;
+    margin-bottom: 0.5em;
+}
+
+/* 段落样式 */
+p {
+    margin-bottom: 1em;
+}
+
+/* 代码块样式 */
+pre {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 30px 20px 20px 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+pre::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 12px;
+    height: 12px;
+    background: #ff5f56;
+    border-radius: 50%;
+    box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+}
+
+code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 1em;
+    display: inline-block;
+    transform: translateY(6px);
+}
+
+/* 复制按钮样式 */
+.copy-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #007aff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+pre:hover .copy-button {
+    opacity: 1;
+}
+
+/* GitHub 徽章样式 */
+.github-badge {
+    display: inline-block;
+    border-radius: 4px;
+    text-shadow: none;
+    font-size: 12px;
+    color: #fff;
+    line-height: 15px;
+    background-color: #abbac3;
+    margin-bottom: 2px;
+}
+
+.github-badge .badge-subject {
+    display: inline-block;
+    background-color: #4d4d4d;
+    padding: 4px 4px 4px 6px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.github-badge .badge-value {
+    display: inline-block;
+    padding: 4px 6px 4px 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.github-badge .bg-blue {
+    background-color: #007ec6;
+}
+
+.github-badge .bg-orange {
+    background-color: #ffa500;
+}
+
+.github-badge .bg-green {
+    background-color: #3bca6e;
+}
+
+/* 搜索容器样式 */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+    /* 确保padding不会影响宽度 */
+}
+
+#search-input:focus {
+    border-color: #007aff;
+    outline: none;
+}
+
+#search-button {
+    padding: 10px;
+    background-color: rgba(29, 99, 237, 0.5);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#search-button:hover {
+    background-color: rgba(29, 99, 237, 0.8);
+    transform: scale(1.05);
+}
+
+#search-button svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+/* 时间显示 */
+.time-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #4a4a4a;
+    /* background: rgba(255, 255, 255, 0.6); */
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.time-container .fas {
+    margin-right: 10px;
+    color: #ff4500;
+}
+
+#current-date {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+#current-time {
+    white-space: pre;
+}
+
+/* 星星链接样式 */
+.stars a {
+    text-decoration: none;
+}
+
+/* 中心线样式 */
+.cf-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: brown;
+}
+
+.cf-item {
+    margin-top: 2px;
+    margin-right: 15px;
+}
+
+.cf-item:not(:last-child)::after {
+    content: "";
+    margin-left: 5px;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    #search-input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    #search-button {
+        width: 100%;
+    }
+}
